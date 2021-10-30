@@ -11,3 +11,11 @@ build:
 build-force:
 	@echo "=> build IMAGE $(REGISTRY)/$(IMAGE):$(TAG)"
 	@docker build --force-rm --no-cache --tag $(REGISTRY)/$(IMAGE):$(TAG) .
+
+.PHONY: push
+push:
+	@echo "=> push IMAGE $(REGISTRY)/$(IMAGE):$(TAG)"
+	@docker push $(REGISTRY)/$(IMAGE):$(TAG)
+
+.PHONY: all
+all: build push
