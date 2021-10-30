@@ -19,3 +19,7 @@ push:
 
 .PHONY: all
 all: build push
+
+.PHONY: test
+test:
+	pytest tests
