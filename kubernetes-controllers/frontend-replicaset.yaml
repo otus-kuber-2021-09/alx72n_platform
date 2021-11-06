@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: alx72n/hipster-frontend:latest
+          image: alx72n/hipster-frontend:v0.0.2
           env:
             - name: PORT
               value: "8080"
